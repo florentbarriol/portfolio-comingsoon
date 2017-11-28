@@ -1,0 +1,9 @@
+Options All -Indexes
+ErrorDocument 403 /forbidden.html
+ErrorDocument 404 /404.html
+ErrorDocument 500 /servererror.html
+
+## SITE REFERRER BANNING
+RewriteCond %{HTTP_REFERER} get-your-social-buttons.info [NC,OR]
+RewriteCond %{HTTP_REFERER} get-your-social-buttons.info
+RewriteRule .* - [F]
